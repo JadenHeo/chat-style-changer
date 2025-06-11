@@ -13,7 +13,7 @@ from .embedding import EmbeddingService
 class VectorStore:
     def __init__(self):
         # Milvus connection
-        connections.connect(host=settings.MILVUS_HOST, port=settings.MILVUS_PORT)
+        connections.connect(uri=settings.MILVUS_URL, token=settings.MILVUS_TOKEN)
         
         # Initialize embedding service
         self.embedding_service = EmbeddingService()

@@ -19,6 +19,9 @@ class Settings(BaseSettings):
     # Milvus Settings
     MILVUS_HOST: str = os.getenv("MILVUS_HOST", "localhost")
     MILVUS_PORT: int = int(os.getenv("MILVUS_PORT", "19530"))
+
+    MILVUS_URL: str = "https://in03-f14be7815686ef7.serverless.gcp-us-west1.cloud.zilliz.com"
+    MILVUS_TOKEN: str = os.getenv("MILVUS_TOKEN", "")
     
     # ChromaDB Settings
     CHROMA_PERSIST_DIRECTORY: str = ".chroma"
