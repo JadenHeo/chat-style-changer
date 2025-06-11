@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "chat_style_changer"
+version = "0.1.0"
+description = "Chat Style Changer project"
+authors = ["jaden.dev"]
+packages = [
+    { include = "app", from = "." },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.3"
+langchain = "^0.3.25"
+langchain-openai = "^0.3.21"
+sentence-transformers = "^4.1.0"
+pymilvus = "^2.5.10"
+python-dotenv = "^1.1.0"
+pydantic = "^2.11.5"
+pydantic-settings = "^2.9.1"
+python-multipart = "^0.0.19"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
