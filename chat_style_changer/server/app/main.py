@@ -1,8 +1,11 @@
+import os
+
+import uvicorn
 from app.api import api, vector_store
 from app.config.config import settings
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -31,5 +34,7 @@ async def health_check():
     return {"status": "healthy"}
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True) 
+    load_dotenv()
+    port = int(os.environ.get("PORT", 8000))
+    reload_ = os.environ.get("RELOAD", "false").lower() == "true"
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port, reload=reload_)
