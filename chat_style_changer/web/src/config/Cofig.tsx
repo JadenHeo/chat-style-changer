@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 export const BASE_URL = "https://heohongjun-chat-style-changer.hf.space";
 // export const BASE_URL = "http://localhost:7860";
 
