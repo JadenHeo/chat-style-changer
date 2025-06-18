@@ -46,6 +46,20 @@ export default function Sidebar() {
         })}>
           <FaDatabase/> Manage Collections
         </NavLink>
+        <NavLink to="/swagger" style={({ isActive }) => ({
+          background: isActive ? '#1976d2' : 'transparent',
+          borderRadius: 8,
+          padding: 12,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 10,
+          fontWeight: 500,
+          fontSize: 16,
+          color: 'inherit',
+          textDecoration: 'none',
+        })}>
+          <FaDatabase/> Swagger
+        </NavLink>
       </Stack>
     </Sheet>
   );

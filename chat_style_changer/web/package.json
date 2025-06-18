@@ -18,7 +18,8 @@
     "react-router-dom": "^6.30.1",
     "@mui/joy": "",
     "@emotion/react": "",
-    "@emotion/styled": ""
+    "@emotion/styled": "",
+    "swagger-ui-react": "^5.13.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
@@ -31,6 +32,7 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
     "vite": "^5.1.0",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "@types/swagger-ui-react": "^5.13.2"
   }
 }

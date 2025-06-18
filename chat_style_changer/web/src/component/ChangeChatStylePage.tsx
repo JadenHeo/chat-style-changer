@@ -1,4 +1,5 @@
-import { Box, Button, Sheet, Typography, Stack, Textarea, CircularProgress } from '@mui/joy';
+import { AUTH_HEADER, BASE_URL } from '@/config/Cofig';
+import { Box, Button, Sheet, Stack, Textarea, Typography } from '@mui/joy';
 import axios from "axios";
 import { useState } from "react";
 
@@ -17,10 +18,10 @@ export default function ChangeChatStylePage() {
       setIsLoading(true);
       setResponseJson(null);
       try {
-        const response = await axios.post('http://localhost:8000/api/v1/convert', {
+        const response = await axios.post(`${BASE_URL}/api/v1/convert`, {
           query: sentence,
           context_messages: context,
-        });
+        }, { headers: AUTH_HEADER });
         setResult(response.data.converted || '변환 완료');
         setResponseJson(response.data);
         // window.alert('문장이 성공적으로 변환되었습니다.');

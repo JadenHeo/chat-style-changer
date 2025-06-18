@@ -19,9 +19,10 @@ class VectorStore:
         self.embedding_service = EmbeddingService()
         self.loaded_collection = None
 
-    def get_collections(self) -> List[str]:
+    def get_collections(self) -> List[Tuple[str, int]]:
         """Get all collections in the database."""
-        return utility.list_collections()
+        collections = utility.list_collections()
+        return [(collection, self.get_count(collection)) for collection in collections]
     
     def get_loaded_collection(self) -> Optional[str]:
         """Get all loaded collections in the database."""

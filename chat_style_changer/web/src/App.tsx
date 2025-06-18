@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import ChangeChatStylePage from "./component/ChangeChatStylePage";
 import Sidebar from './component/SideBar';
+import SwaggerPage from './component/SwaggerPage';
 import VectorStorePage from "./component/VectorStorePage";
 import "./index.css";
 
@@ -13,6 +14,7 @@ export default function App() {
           <Routes>
             <Route path="/convert" element={<ChangeChatStylePage />} />
             <Route path="/collections" element={<VectorStorePage />} />
+            <Route path="/swagger" element={<SwaggerPage />} />
             <Route path="/*" element={<ChangeChatStylePage />} />
           </Routes>
         </div>
